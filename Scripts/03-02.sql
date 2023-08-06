@@ -6,7 +6,7 @@ FROM sales sls
 INNER JOIN employee emp
   ON sls.employeeId = emp.employeeId
 WHERE sls.soldDate >= '2021-01-01'
-AND sls.soldDate < '2022-01-01'
+AND sls.soldDate < '2022-01-01';
 
 
 -- 2. implement case statements for each month
@@ -51,7 +51,7 @@ INNER JOIN employee emp
   ON sls.employeeId = emp.employeeId
 WHERE sls.soldDate >= '2021-01-01'
   AND sls.soldDate < '2022-01-01'
-ORDER BY emp.lastName, emp.firstName
+ORDER BY emp.lastName, emp.firstName;
 
 -- 3. finally group the data
 SELECT emp.firstName, emp.lastName,
@@ -97,4 +97,4 @@ INNER JOIN employee emp
 WHERE sls.soldDate >= '2021-01-01'
   AND sls.soldDate < '2022-01-01'
 GROUP BY emp.firstName, emp.lastName
-ORDER BY emp.lastName, emp.firstName
+ORDER BY emp.lastName, emp.firstName;
